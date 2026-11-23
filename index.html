@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helmet rollover</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./rollover.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="course">Foundations of Interactive Journalism</p>
+      <h1>Helmet rollover</h1>
+      <p id="directions">Hover over or tap the marked helmet to see the price. Using a keyboard? Press Tab.</p>
+    </header>
+
+    <figure class="photo" aria-describedby="directions">
+      <img src="./football-helmets.jpg" width="1200" height="790"
+           alt="Four Sierra Canyon football players in blue uniforms. Number 1, holding a football, is in the left foreground.">
+
+      <!-- Move or resize this group by changing the percentages in styles.css. -->
+      <div class="hotspot">
+        <button class="hotspot-button" type="button"
+                aria-label="Foreground left helmet price"
+                aria-controls="helmet-price" aria-expanded="false">
+          <span class="marker" aria-hidden="true">+</span>
+        </button>
+        <!-- Edit the price here. No JavaScript changes are needed. -->
+        <span class="price" id="helmet-price" hidden>$5</span>
+      </div>
+    </figure>
+    <p class="sr-only" id="announcement" role="status"></p>
+  </main>
+</body>
+</html>
